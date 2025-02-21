@@ -1,0 +1,66 @@
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    border: 10px solid darkcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: whitesmoke;
+    color: black;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/* Folder Button */
+.folder {
+    background: lightpink;
+    padding: 15px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.folder:hover {
+    background: #bbb;
+}
+
+/* Gallery */
+.gallery {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    max-width: 90%;
+}
+
+.gallery.show {
+    display: grid;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}

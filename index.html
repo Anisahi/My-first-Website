@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0>
+    <title>My first website</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <img src="profile.jpeg" width="160" height="200"> <br></br>
+<style>
+    @import url('mystyle.css');
+    body {
+        background-color: lightskyblue;
+    }
+</style>    
+</head>
+<body>
+    
+    <h1 style="color: darkblue; text-align:center;">Welcome to My First Website</h1> <br></br>
+    <p>The owner of this simple webpage is Anisah M. Indar an 18 years old girl currently studying in Gordon College-Olongapo</p>
+
+    <header>
+            <h3> My handmade stuff Gallery &#10084 </h3>
+    </header>
+    
+    <main>
+        <div class="folder"
+         onclick="toggleGallery()">&#128193: Click to Open Gallery</div>
+
+             <div class="gallery" id="gallery">
+                
+                <img src="image1.jpg" alt="Handmade No.1">  
+                <img src="image2.jpg" alt="Handmade No.2">  
+                <img src="image3.jpg" alt="Handmade No.3">  
+                <img src="image4.jpg" alt="Handmade No.4">  
+             </div>
+    </main>  
+        <h1> &#127918 </h1>
+    <h3> Sample Game Section </h3>
+ <section class="game">
+    <h4 style="color:white;" > GUESS THE NUMBER! </h4>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">Submit</button>
+    <p id="result"></p>
+ </section>   
+ 
+ <script>
+    let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    function checkGuess() {
+        let userGuess = document.getElementById("guess").value;
+        let resultText = "";
+
+        if (userGuess == randomNumber) { resultText = " Congratulations! You guessed the number. &#127881; ";
+        } else if (userGuess <randomNumber) { 
+            resultText = "Too low! Try Again.";
+        } else { 
+            resultText = "Too high! Try Again.";
+        }
+
+document.getElementById("result").innerText = resultText;
+    }
+ </script>
+<br></br> 
+
+<section class="contact">
+    <p><i>Please note that this is just a practice webpage for a project.Contact the owner for suggestions or tips.</i></p>
+    <p><a
+    href="mailto:anisahmanogangcar@gmail.com">anisahmanogangcar@gmail.com</a><p>
+    </section>
+    <h4 style="color: darkgreen;">Thank You so much!</h4>
+    <script>
+        function toggleGallery() {
+
+        document.getElementById("gallery").classList.toggle("show");
+        }
+    </script>    
+
+</body>
+</html>
